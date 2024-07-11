@@ -45,9 +45,9 @@ The CI/CD pipeline is configured using GitHub Actions. It is set to trigger on:
 To manually trigger the workflow:
 * Navigate to the "Actions" tab in  GitHub repository.
 * Select the "Build and Deploy" workflow.
-* Click on the "Run workflow" button and select the branch to run the workflow.
+* Click on the "Run workflow" button and select the branch to run the workflow.(The workflow completes and sleeps for 2 minutes to let task provisioned successfully)
 
-### How to Deploy the Application Using Terraform
+### How to Deploy the Application Using Terraform (from local)
 ### Terraform Setup
 Cd to `/infrastructure/aws/environment/staging` directory
 Initialize Terraform:

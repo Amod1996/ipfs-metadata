@@ -64,7 +64,7 @@ jobs:
         uses: hashicorp/setup-terraform@v1
 
       - name: Initialize Terraform
-        run: terraform init
+        run: terraform init && terraform plan
         working-directory: ./infrastructure/aws/environment/staging
         env:
           TF_VAR_postgres_user: ${{ secrets.POSTGRES_USER }}

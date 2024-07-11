@@ -14,6 +14,7 @@ This application scrapes NFT metadata from IPFS using a CSV list of IPFS CIDs an
 - Go 1.19 or higher
 - PostgreSQL
 - Docker (for running PostgreSQL in a container, if desired)
+  
 
 ## Setup
 

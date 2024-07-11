@@ -19,6 +19,8 @@ resource "aws_ecs_task_definition" "ipfs_metadata_task" {
     {
       name      = "ipfs-metadata-container"
       image     = "amodkc/ipfs-metadata-server:latest"
+      cpu       = 256                      # CPU units for the container
+      memory    = 512                      # Memory in MiB for the container
       essential = true
       environment = [
         {

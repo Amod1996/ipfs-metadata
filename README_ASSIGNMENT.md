@@ -18,8 +18,8 @@ POSTGRES_USER: testuser
 POSTGRES_PASSWORD: testpassword
 ```
 You can also change the docker hub username and password to your own account(make sure the repository is public)
-* AWS s3 bucket to store terraform state file, currently in backend.tf, it is named to `staging-terraform-state-bucket--usw2-az1--x-s3` 
-* AWS DynamoDb table named  `terraform-locks`  to put a lock on state file  
+* AWS s3 bucket to store terraform state file, currently in backend.tf, it is named to `staging-terraform-state-bucket--usw2-az1--x-s3`
+* AWS DynamoDb table named  `terraform-locks`  to put a lock on state file
 
 ## How to Build and Run the Docker Container
 
@@ -28,12 +28,12 @@ You can also change the docker hub username and password to your own account(mak
 To build the Docker image, use the following command:
 
 ```sh
-docker build -t amodkc/nft-metadata-server:latest .
+docker-compose build
 ```
 ### Run the Docker Container
 To run the Docker container, use the following command:
 ```sh
-docker run -p 8080:8080 amodkc/nft-metadata-server:latest
+docker-compose up
 ```
 ### How to Trigger the CI/CD Pipeline
 The CI/CD pipeline is configured using GitHub Actions. It is set to trigger on:
@@ -63,7 +63,7 @@ Apply the Terraform configuration:
 ```sh
 terraform apply -auto-approve
 ```
- 
+
 
 ### How to check if application is running correctly on AWS
 * Navigate to load balancer in EC2 and click on the load balancer and look for the url like `http://ipfs-metadata-alb-1872149953.us-west-2.elb.amazonaws.com`
